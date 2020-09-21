@@ -37,19 +37,20 @@
                                     <action selector="moveTheSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="VMu-zO-1l4"/>
                                 </connections>
                             </slider>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter your name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yK8-MZ-zn2">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="yK8-MZ-zn2">
                                 <rect key="frame" x="20" y="283" width="374" height="34"/>
-                                <color key="textColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8E-jx-JjC">
-                                <rect key="frame" x="20" y="361" width="374" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8E-jx-JjC">
+                                <rect key="frame" x="20" y="337" width="374" height="30"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Set text!">
+                                <state key="normal" title="Done">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="setText" destination="BYZ-38-t0r" eventType="touchUpInside" id="NhE-uD-sTU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -59,6 +60,9 @@
                             <constraint firstItem="ZFK-OR-Zs2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8m7-Jr-Q2n"/>
                             <constraint firstItem="yK8-MZ-zn2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="EEL-3q-aeB"/>
                             <constraint firstItem="yKL-Wd-Ns4" firstAttribute="top" secondItem="cfY-eY-ixy" secondAttribute="bottom" constant="40" id="F7d-dN-Vbj"/>
+                            <constraint firstItem="O8E-jx-JjC" firstAttribute="top" secondItem="yK8-MZ-zn2" secondAttribute="bottom" constant="20" id="GoZ-wc-nLM"/>
+                            <constraint firstItem="O8E-jx-JjC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Igw-s2-uhI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O8E-jx-JjC" secondAttribute="trailing" constant="20" id="QvS-44-Ind"/>
                             <constraint firstItem="ZFK-OR-Zs2" firstAttribute="top" secondItem="yKL-Wd-Ns4" secondAttribute="bottom" constant="40" id="WbM-ev-Hzs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yKL-Wd-Ns4" secondAttribute="trailing" constant="20" id="cNv-sg-0Zp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZFK-OR-Zs2" secondAttribute="trailing" constant="20" id="gqJ-yX-Rda"/>
@@ -79,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+            <point key="canvasLocation" x="-371" y="141"/>
         </scene>
     </scenes>
 </document>

@@ -59,5 +59,29 @@ class ViewController: UIViewController {
         mainLabel.textColor = .white
         mainLabel.text = String(sliderControl.value)
     }
+    
+    @IBAction func setText() {
+        guard let inputText = textField.text, !inputText.isEmpty else { return }
+        
+        if let _ = Double(inputText) {
+            print("Wrong format")
+            showAlert(title: "Wrong format!", message: "Please, enter your name")
+        } else {
+            mainLabel.text = inputText
+            textField.text = nil
+        }
+    }
+    
 }
 
+extension ViewController {
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        
+        present(alert, animated: true)
+    }
+}
